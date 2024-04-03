@@ -7,8 +7,33 @@
   background: #ffffff;
   border-radius: 8px;
   margin-bottom: 24px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end ;
 }
 
 .zaui-list-item {
   cursor: pointer;
+}
+.img-slide
+{
+  width: auto;
+  display: block;
+  height: 100%;
+}
+.welcome-text
+{
+  font-size: 8vh;
+}
+.get-started-button{
+  background-color: #EF3024;
+}
+.get-started-button:active{
+  background-color: #EF3024;
+  opacity: 0.8  ;
+  
+}
+.get-started-button:focus{
+  background-color: #EF3024;
 }
