@@ -5,9 +5,9 @@ import { userState } from "../state";
 
 
 const HomePage: React.FunctionComponent = () => {
-  
-  
-  const [currentSlide, setCurrentSlide] = useState(0)
+
+
+  const [endSlidePassed, setEndlidePassed] = useState(false)
   return (
     <Page className="section-container">
 
@@ -20,7 +20,15 @@ const HomePage: React.FunctionComponent = () => {
         alignItems="center"
         className="section-container"
       >
-        <Swiper duration={3000} loop className="h-full" afterChange={(curentIndex: number) => {console.log(curentIndex); setCurrentSlide(curentIndex) }}>
+        <Swiper loop className="h-full" afterChange={
+          (currentIndex: number) => {
+            if(currentIndex === 2){
+              setEndlidePassed(true);
+            }
+            
+            
+
+          }}>
           <Swiper.Slide >
             <img
               className="w-full block h-1/2"
@@ -75,11 +83,11 @@ const HomePage: React.FunctionComponent = () => {
         </Swiper>
 
       </Box>
-      {currentSlide!=2?<Box mt={2} flex justifyContent="space-between">
+      {!endSlidePassed ? <Box mt={2} flex justifyContent="space-between">
         <Button size="small" type="neutral" variant="tertiary">Skip</Button>
         <Button size="small" type="neutral" variant="tertiary">Next</Button>
-      </Box>:<Button className="get-started-button">Get Started</Button>}
-      
+      </Box> : <Button className="get-started-button">Get Started</Button>}
+
 
     </Page>
   );
