@@ -1,23 +1,41 @@
 .home-page{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F6F8;
 }
 .top-box{
     background-color: #0A182E;
     color: white;
     height: 22vh;
-    
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 4vh;
+    padding-left: 20px;
 }
 .title-box{
     display: flex;
     justify-content: space-between;
-    padding-top: 10px ;
+    padding-top: inherit ;
 }
 .home-text{
-    padding-left: 20px;
-    font-size: xx-large;
+    
+    font-size: 28px;
 }
 .avatar{
     margin-right: 20px;
 }
-
+.home-functions{
+    display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  justify-content: center;
+}
+.function-box{
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    width: 165px;
+    height: 130px;
+}

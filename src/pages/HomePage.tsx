@@ -1,11 +1,16 @@
-import React from 'react'
-import { Page, Box, Text, Avatar } from 'zmp-ui'
+import React, { useDeferredValue } from 'react'
+import { Page, Text, Avatar } from 'zmp-ui'
+
 import '../css/HomePage.css'
 import { userState } from "../state";
 import { useRecoilValue } from "recoil";
-import UserAvatar from '../components/user-avatar'
+import { BottomNavigationAction, Box, Tab, Tabs, Typography } from '@mui/material';
+import HomeTabs from '../components/Home/HomeTabs';
+
+
 const HomePage: React.FunctionComponent = () => {
-  const user = useRecoilValue(userState);
+
+
   return (
     <Page className='home-page'>
 
@@ -13,10 +18,43 @@ const HomePage: React.FunctionComponent = () => {
 
         <Box className='title-box'>
           <Text.Title className='home-text'>Home</Text.Title>
-          <Box className='avatar'><UserAvatar user={user.userInfo}/></Box>
+          <Box className='avatar'><Avatar online story='default' src='http://h5.zdn.vn/static/images/avatar.png' /></Box>
+
+        </Box>
+        <Box >
+
+          <HomeTabs />
+
         </Box>
       </Box>
 
+      <Box className='home-functions'>
+        <Box className='function-box'>
+          assad
+        </Box>
+        <Box className='function-box'>
+          assad
+        </Box>
+        <Box className='function-box'>
+          assad
+        </Box>
+        <Box className='function-box'>
+          assad
+        </Box>
+        <Box className='function-box'>
+          assad
+        </Box>
+        <Box className='function-box'>
+          assad
+        </Box>
+        <Box className='function-box'>
+          assad
+        </Box>
+        <Box className='function-box'>
+          assad
+        </Box>
+      </Box>
+      
     </Page>
   )
 }
