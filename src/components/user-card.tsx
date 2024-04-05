@@ -4,6 +4,7 @@ import { Avatar, Box, Text } from "zmp-ui";
 
 interface UserProps {
   user: GetUserInfoReturns["userInfo"];
+  
 }
 
 const UserCard: React.FunctionComponent<UserProps> = ({ user }) => {

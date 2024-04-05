@@ -1,0 +1,23 @@
+.home-page{
+    height: 100vh;
+}
+.top-box{
+    background-color: #0A182E;
+    color: white;
+    height: 22vh;
+    
+    
+}
+.title-box{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px ;
+}
+.home-text{
+    padding-left: 20px;
+    font-size: xx-large;
+}
+.avatar{
+    margin-right: 20px;
+}
+
