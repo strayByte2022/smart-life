@@ -3,7 +3,7 @@ import { Page, Swiper, Box, Text, useNavigate, Button } from "zmp-ui";
 import { useRecoilValue } from "recoil";
 import { userState } from "../state";
 
-const HomePage: React.FunctionComponent = () => {
+const WelcomePage: React.FunctionComponent = () => {
   const navigate = useNavigate();
   const swiperRef = useRef<any>(null);
   const [endSlidePassed, setEndlidePassed] = useState(false);
@@ -86,7 +86,7 @@ const HomePage: React.FunctionComponent = () => {
             type="neutral"
             variant="tertiary"
             onClick={() => {
-              navigate("/about");
+              navigate("/home");
             }}
           >
             Skip
@@ -101,10 +101,17 @@ const HomePage: React.FunctionComponent = () => {
           </Button>
         </Box>
       ) : (
-        <Button className="get-started-button">Get Started</Button>
+        <Button
+          className="get-started-button"
+          onClick={() => {
+            navigate("/home");
+          }}
+        >
+          Get Started
+        </Button>
       )}
     </Page>
   );
 };
 
-export default HomePage;
+export default WelcomePage;
