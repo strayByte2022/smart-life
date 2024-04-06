@@ -2,12 +2,8 @@ import { makeStyles, Tab, Tabs } from '@mui/material';
 import React from 'react'
 
 
-const HomeTabs = () => {
-    const [value, setValue] = React.useState(0);
-    
-    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-        setValue(newValue);
-    };
+const HomeTabs = ({value, handleChange}) => {
+   
     return (
         <Tabs 
             value={value}
