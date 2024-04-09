@@ -2,7 +2,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #F5F6F8;
+    background-color: #f7f8fa;
 }
 
 .top-box {
@@ -39,7 +39,7 @@
     gap: 10px;
 }
 
-.function-box {
+.function-button{
     background-color: white;
     border-style: solid;
     border-color: black;
@@ -47,4 +47,5 @@
     height: 130px;
     display: inline;
     text-align: center;
+    border-radius: 20px
 }

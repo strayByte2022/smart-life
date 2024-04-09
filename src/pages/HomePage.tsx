@@ -4,10 +4,11 @@ import { Page, Text, Avatar } from 'zmp-ui'
 import '../css/HomePage.css'
 import { userState } from "../state";
 import { useRecoilValue } from "recoil";
-import { BottomNavigationAction, Box, Tab, Tabs, Typography } from '@mui/material';
+import { BottomNavigationAction, Box, Button, Tab, Tabs, Typography } from '@mui/material';
 import HomeTabs from '../components/Home/HomeTabs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { PlusIcon } from '../components/icons';
+import { BedroomIcon, CustomIcon, GarageIcon, KidsRoomIcon, KitchenIcon, OfficeIcon, SofaIcon, TvIcon } from '../components/icons';
+
 
 
 const HomePage: React.FunctionComponent = () => {
@@ -35,30 +36,37 @@ const HomePage: React.FunctionComponent = () => {
       </Box>
       {
         value === 0 ? <Box className='home-functions'>
-          <Box className='function-box'>
-            <PlusIcon/>
-          </Box>
-          <Box className='function-box'>
-            assad
-          </Box>
-          <Box className='function-box'>
-            assad
-          </Box>
-          <Box className='function-box'>
-            assad
-          </Box>
-          <Box className='function-box'>
-            assad
-          </Box>
-          <Box className='function-box'>
-            assad
-          </Box>
-          <Box className='function-box'>
-            assad
-          </Box>
-          <Box className='function-box'>
-            assad
-          </Box>
+          <Button className='function-button' sx={{backgroundColor:'white'}}>
+            <SofaIcon/>
+          </Button>
+
+          <Button className='function-button' sx={{backgroundColor:'white'}}>
+            <KitchenIcon/>
+          </Button>
+
+          <Button className='function-button'sx={{backgroundColor:'white'}}>
+            
+          </Button>
+
+          <Button className='function-button'sx={{backgroundColor:'white'}}>
+            <BedroomIcon/>
+          </Button>
+
+          <Button className='function-button'sx={{backgroundColor:'white'}}>
+            <GarageIcon/>
+          </Button>
+
+          <Button className='function-button'sx={{backgroundColor:'white'}}>
+            <OfficeIcon/>
+          </Button>
+
+          <Button className='function-button'sx={{backgroundColor:'white'}}>
+           <KidsRoomIcon/>
+          </Button>
+
+          <Button className='function-button' sx={{backgroundColor:'white'}}>
+            <TvIcon/>
+          </Button>
         </Box> : <Box>
           <Text.Title>
             under development
