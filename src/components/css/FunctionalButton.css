@@ -9,6 +9,7 @@
     border-radius: 20px;
 }
 .input-text{
+    padding-top: 12px;
     color: black;
     text-transform: initial;
     font-size: 20px;

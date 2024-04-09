@@ -59,3 +59,10 @@
     text-transform: initial;
     font-size: 15px;
 }
+.bottom-navigation-bar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;    
+}
