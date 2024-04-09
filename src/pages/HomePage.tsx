@@ -8,6 +8,8 @@ import { BottomNavigationAction, Box, Button, Tab, Tabs, Typography } from '@mui
 import HomeTabs from '../components/Home/HomeTabs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BedroomIcon, CustomIcon, GarageIcon, KidsRoomIcon, KitchenIcon, OfficeIcon, SofaIcon, TvIcon } from '../components/icons';
+import { FunctionalButton } from '../components/Home';
+import { Tv } from '@mui/icons-material';
 
 
 
@@ -36,37 +38,15 @@ const HomePage: React.FunctionComponent = () => {
       </Box>
       {
         value === 0 ? <Box className='home-functions'>
-          <Button className='function-button' sx={{backgroundColor:'white'}}>
-            <SofaIcon/>
-          </Button>
-
-          <Button className='function-button' sx={{backgroundColor:'white'}}>
-            <KitchenIcon/>
-          </Button>
-
-          <Button className='function-button'sx={{backgroundColor:'white'}}>
-            
-          </Button>
-
-          <Button className='function-button'sx={{backgroundColor:'white'}}>
-            <BedroomIcon/>
-          </Button>
-
-          <Button className='function-button'sx={{backgroundColor:'white'}}>
-            <GarageIcon/>
-          </Button>
-
-          <Button className='function-button'sx={{backgroundColor:'white'}}>
-            <OfficeIcon/>
-          </Button>
-
-          <Button className='function-button'sx={{backgroundColor:'white'}}>
-           <KidsRoomIcon/>
-          </Button>
-
-          <Button className='function-button' sx={{backgroundColor:'white'}}>
-            <TvIcon/>
-          </Button>
+          
+          <FunctionalButton icon={<SofaIcon/>} deviceQuantity={3} roomName={'Living Room'}/>
+          <FunctionalButton icon={<KitchenIcon/>} deviceQuantity={3} roomName={'Kitchen'}/>
+          <FunctionalButton icon={<></>} deviceQuantity={3} roomName={'Living Room'}/>
+          <FunctionalButton icon={<BedroomIcon/>} deviceQuantity={3} roomName={'Bedroom'}/>
+          <FunctionalButton icon={<GarageIcon/>} deviceQuantity={3} roomName={'Garage'}/>
+          <FunctionalButton icon={<OfficeIcon/>} deviceQuantity={3} roomName={'Office'}/>
+          <FunctionalButton icon={<KidsRoomIcon/>} deviceQuantity={3} roomName={'Kids Room'}/>
+          <FunctionalButton icon={<TvIcon/>} deviceQuantity={3} roomName={'TV Room'}/>
         </Box> : <Box>
           <Text.Title>
             under development

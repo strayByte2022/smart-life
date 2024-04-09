@@ -45,7 +45,17 @@
     border-color: black;
     width: 165px;
     height: 130px;
-    display: inline;
-    text-align: center;
-    border-radius: 20px
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.input-text{
+    color: black;
+    text-transform: initial;
+    font-size: 20px;
+}
+.input-text-low{
+    color: #999999;
+    text-transform: initial;
+    font-size: 15px;
 }
