@@ -2,7 +2,7 @@ import { makeStyles, Tab, Tabs } from '@mui/material';
 import React from 'react'
 
 
-const HomeTabs = ({value, handleChange}) => {
+const RoomDeviceTab = ({value, handleChange}) => {
    
     return (
         <Tabs 
@@ -25,4 +25,4 @@ const HomeTabs = ({value, handleChange}) => {
     )
 }
 
-export default HomeTabs
+export default RoomDeviceTab

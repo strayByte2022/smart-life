@@ -3,6 +3,18 @@
     display: flex;
     flex-direction: column;
     background-color: #f7f8fa;
+    overflow: auto;
+}
+
+.content {
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    height: calc(100vh - 60px);
+    /* Adjust this value based on the height of your bottom navigation bar */
+    position: relative;
+    /* Establish a new positioning context for children */
+    padding-bottom: 50px;
+    /* Prevent the bottom navigation bar from overlapping content */
 }
 
 .top-box {
@@ -32,6 +44,7 @@
 }
 
 .home-functions {
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
     padding-top: 20px;
@@ -39,7 +52,7 @@
     gap: 10px;
 }
 
-.function-button{
+.function-button {
     background-color: white;
     border-style: solid;
     border-color: black;
@@ -49,20 +62,31 @@
     flex-direction: column;
     border-radius: 20px;
 }
-.input-text{
+
+.input-text {
     color: black;
     text-transform: initial;
     font-size: 20px;
 }
-.input-text-low{
+
+.input-text-low {
     color: #999999;
     text-transform: initial;
     font-size: 15px;
 }
-.bottom-navigation-bar{
+
+.bottom-navigation-bar {
+    background-color: white;
     display: flex;
-    width: 100%;
+    height: 60px;
     justify-content: space-between;
     padding-left: 30px;
-    padding-right: 30px;    
+    padding-right: 30px;
+    
+    position: fixed;
+    /* Fix the position */
+    bottom: 0;
+    /* Stick it to the bottom */
+    width: 100%;
+    /* Full width */
 }

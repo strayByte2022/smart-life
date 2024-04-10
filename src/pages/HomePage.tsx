@@ -5,25 +5,26 @@ import '../css/HomePage.css'
 import { userState } from "../state";
 import { useRecoilValue } from "recoil";
 import { BottomNavigation, Box, Button, IconButton, Tab, Tabs, Typography } from '@mui/material';
-import HomeTabs from '../components/Home/HomeTabs';
+import HomeTabs from '../components/Home/RoomDeviceTab';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BedroomIcon, CustomIcon, GarageIcon, KidsRoomIcon, KitchenIcon, OfficeIcon, SofaIcon, TvIcon } from '../components/icons';
 import { FunctionalButton } from '../components/Home';
 import { BarChart, Cyclone, Home, Settings } from '@mui/icons-material';
+import RoomDeviceTab from '../components/Home/RoomDeviceTab';
 
 
 
 
 const HomePage: React.FunctionComponent = () => {
   const [value, setValue] = React.useState(0);
-
+  
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 
   return (
     <Page className='home-page'>
-
+      <Box className='content'>
       <Box className='top-box' >
 
         <Box className='title-box'>
@@ -33,7 +34,7 @@ const HomePage: React.FunctionComponent = () => {
         </Box>
         <Box >
 
-          <HomeTabs handleChange={handleChange} value={value} />
+          <RoomDeviceTab handleChange={handleChange} value={value} />
 
         </Box>
       </Box>
@@ -54,9 +55,9 @@ const HomePage: React.FunctionComponent = () => {
           </Text.Title>
         </Box>
       }
-      <BottomNavigation>
+      </Box>
 
-        <Box  className='bottom-navigation-bar'>
+        <Box className='bottom-navigation-bar'>
           <IconButton>
             <Home />
           </IconButton>
@@ -64,7 +65,7 @@ const HomePage: React.FunctionComponent = () => {
           <IconButton>
             <BarChart />
           </IconButton>
-
+      
           <IconButton>
             <Cyclone />
           </IconButton>
@@ -73,7 +74,7 @@ const HomePage: React.FunctionComponent = () => {
             <Settings />
           </IconButton>
         </Box>
-      </BottomNavigation>
+      
 
     </Page>
   )
