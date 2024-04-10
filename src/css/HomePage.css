@@ -20,7 +20,7 @@
 .top-box {
     background-color: #0A182E;
     color: white;
-    height: 22vh;
+    height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,7 +36,8 @@
 
 .home-text {
 
-    font-size: 28px;
+    font-size: 34px;
+    align-self: flex-end;
 }
 
 .avatar {
@@ -51,7 +52,13 @@
     justify-content: center;
     gap: 10px;
 }
+.tab-and-add-button{
+    padding-top:10px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
 
+}
 .function-button {
     background-color: white;
     border-style: solid;
@@ -89,4 +96,30 @@
     /* Stick it to the bottom */
     width: 100%;
     /* Full width */
+}
+.bottom-drawer{
+    height: 33vh;
+    padding-top: 30px;
+    border-top-left-radius:80px 80px;
+    border-top-right-radius: 80px 80px;
+}
+.bottom-drawer-title
+{
+    font-size: 34px;
+    padding-left: 30px;
+}
+.bottom-drawer-divider{
+    padding-top: 25px;
+    padding-left: 0;
+}
+.bottom-drawer-buttons{
+    display: flex;
+    padding-left: 30px;
+    width: 100%;
+    justify-content: start;
+}
+.bottom-drawer-buttons-layout{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
 }
