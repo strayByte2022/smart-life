@@ -2,13 +2,25 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #F5F6F8;
+    background-color: #f7f8fa;
+    overflow: auto;
+}
+
+.content {
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    height: calc(100vh - 60px);
+    /* Adjust this value based on the height of your bottom navigation bar */
+    position: relative;
+    /* Establish a new positioning context for children */
+    padding-bottom: 50px;
+    /* Prevent the bottom navigation bar from overlapping content */
 }
 
 .top-box {
     background-color: #0A182E;
     color: white;
-    height: 22vh;
+    height: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,7 +36,8 @@
 
 .home-text {
 
-    font-size: 28px;
+    font-size: 34px;
+    align-self: flex-end;
 }
 
 .avatar {
@@ -32,19 +45,81 @@
 }
 
 .home-functions {
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
     padding-top: 20px;
     justify-content: center;
     gap: 10px;
 }
+.tab-and-add-button{
+    padding-top:10px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
 
-.function-box {
+}
+.function-button {
     background-color: white;
     border-style: solid;
     border-color: black;
     width: 165px;
     height: 130px;
-    display: inline;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.input-text {
+    color: black;
+    text-transform: initial;
+    font-size: 20px;
+}
+
+.input-text-low {
+    color: #999999;
+    text-transform: initial;
+    font-size: 15px;
+}
+
+.bottom-navigation-bar {
+    background-color: white;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    position: fixed;
+    /* Fix the position */
+    bottom: 0;
+    /* Stick it to the bottom */
+    width: 100%;
+    /* Full width */
+}
+.bottom-drawer{
+    height: 33vh;
+    padding-top: 30px;
+    border-top-left-radius:80px 80px;
+    border-top-right-radius: 80px 80px;
+}
+.bottom-drawer-title
+{
+    font-size: 34px;
+    padding-left: 30px;
+}
+.bottom-drawer-divider{
+    padding-top: 25px;
+    padding-left: 0;
+}
+.bottom-drawer-buttons{
+    display: flex;
+    padding-left: 30px;
+    width: 100%;
+    justify-content: start;
+}
+.bottom-drawer-buttons-layout{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
 }
