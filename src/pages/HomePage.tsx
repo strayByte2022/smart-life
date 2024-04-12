@@ -43,7 +43,7 @@ const HomePage: React.FunctionComponent = () => {
 
             <RoomDeviceTab handleChange={handleChange} value={value} />
             <IconButton onClick={callAddDevice}>
-              <CustomPlusIcon/>
+              <CustomPlusIcon />
             </IconButton>
           </Box>
         </Box>
@@ -52,7 +52,7 @@ const HomePage: React.FunctionComponent = () => {
 
             <FunctionalButton icon={<SofaIcon />} deviceQuantity={3} roomName={'Living Room'} />
             <FunctionalButton icon={<KitchenIcon />} deviceQuantity={3} roomName={'Kitchen'} />
-            <FunctionalButton icon={<BathrommIcon/>} deviceQuantity={3} roomName={'Bathroom'} />
+            <FunctionalButton icon={<BathrommIcon />} deviceQuantity={3} roomName={'Bathroom'} />
             <FunctionalButton icon={<BedroomIcon />} deviceQuantity={3} roomName={'Bedroom'} />
             <FunctionalButton icon={<GarageIcon />} deviceQuantity={3} roomName={'Garage'} />
             <FunctionalButton icon={<OfficeIcon />} deviceQuantity={3} roomName={'Office'} />
@@ -83,28 +83,34 @@ const HomePage: React.FunctionComponent = () => {
           <Settings />
         </IconButton>
       </Box>
-      <SwipeableDrawer 
-      anchor='bottom' 
-      open={addDevice} 
-      onClose={() => { setAddDevice(false) }} 
-      onOpen={() => { setAddDevice(true) }}>
+      <SwipeableDrawer
+        anchor='bottom'
+        open={addDevice}
+        onClose={() => { setAddDevice(false)}}
+        onOpen={() => { setAddDevice(true)}}
+        sx={{borderTopLeftRadius:'20px', borderTopRightRadius:'20px', borderColor:'black  '}}
+        
+        >
         <Box className='bottom-drawer'>
           <Text.Title className='bottom-drawer-title'>Add New</Text.Title>
           <Divider className='bottom-drawer-divider' />
+          <Box>
+            <Button sx={{ display: 'flex', justifyContent: 'flex-start', color: 'black', textTransform: 'initial', paddingLeft: '30px' }}
+              onClick={() => { navigate('/newdevice') }}>
+              <Box className='bottom-drawer-buttons-layout' sx={{ gap: '32px' }}>
+                <KeySharp />
+                <Text.Title>Add New Room</Text.Title>
+              </Box>
+            </Button>
 
-          <Button className='bottom-drawer-buttons' onClick={()=>{navigate('/newdevice')}}>
-            <Box className='bottom-drawer-buttons-layout'>
-              <KeySharp />
-              <Text.Title>Add New Room</Text.Title>
-            </Box>
-          </Button>
+            <Button sx={{ display: 'flex', justifyContent: 'flex-start', color: 'black', textTransform: 'initial', paddingLeft: '30px' }} onClick={() => { navigate('/newroom') }}>
+              <Box className='bottom-drawer-buttons-layout' sx={{ gap: '32px' }}>
+                <KeySharp />
+                <Text.Title>Add New Device</Text.Title>
+              </Box>
+            </Button>
+          </Box>
 
-          <Button className='bottom-drawer-buttons' disabled>
-            <Box className='bottom-drawer-buttons-layout'>
-              <KeySharp />
-              <Text.Title>Add New Device</Text.Title>
-            </Box>
-          </Button>
 
 
         </Box>

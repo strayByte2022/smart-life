@@ -8,6 +8,8 @@ import User from "../pages/user";
 import WelcomePage from "../pages/WelcomePage";
 import HomePage from "../pages/HomePage";
 import AddNewDevicePage from "../pages/AddNewDevice";
+import AddNewRoom from "../pages/AddNewRoom";
+import AddNewRoomPage from "../pages/AddNewRoom";
 
 const MyApp = () => {
   return (
@@ -22,6 +24,7 @@ const MyApp = () => {
               <Route path="/form" element={<Form></Form>}></Route>
               <Route path="/user" element={<User></User>}></Route>
               <Route path="/newdevice" element={<AddNewDevicePage/>}></Route>
+              <Route path="/newroom" element={<AddNewRoomPage/>}></Route>
             </AnimationRoutes>
           </ZMPRouter>
         </SnackbarProvider>
