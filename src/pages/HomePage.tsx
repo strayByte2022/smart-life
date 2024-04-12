@@ -1,5 +1,5 @@
 import React, { useDeferredValue, useState } from 'react'
-import { Page, Text, Avatar, Icon } from 'zmp-ui'
+import { Page, Text, Avatar, Icon, useNavigate } from 'zmp-ui'
 
 import '../css/HomePage.css'
 import { userState } from "../state";
@@ -24,7 +24,7 @@ const HomePage: React.FunctionComponent = () => {
   }
 
 
-
+  const navigate = useNavigate();
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
@@ -83,19 +83,23 @@ const HomePage: React.FunctionComponent = () => {
           <Settings />
         </IconButton>
       </Box>
-      <SwipeableDrawer anchor='bottom' open={addDevice} onClose={() => { setAddDevice(false) }} onOpen={() => { setAddDevice(true) }}>
+      <SwipeableDrawer 
+      anchor='bottom' 
+      open={addDevice} 
+      onClose={() => { setAddDevice(false) }} 
+      onOpen={() => { setAddDevice(true) }}>
         <Box className='bottom-drawer'>
           <Text.Title className='bottom-drawer-title'>Add New</Text.Title>
           <Divider className='bottom-drawer-divider' />
 
-          <Button className='bottom-drawer-buttons'>
+          <Button className='bottom-drawer-buttons' onClick={()=>{navigate('/newdevice')}}>
             <Box className='bottom-drawer-buttons-layout'>
               <KeySharp />
               <Text.Title>Add New Room</Text.Title>
             </Box>
           </Button>
 
-          <Button className='bottom-drawer-buttons'>
+          <Button className='bottom-drawer-buttons' disabled>
             <Box className='bottom-drawer-buttons-layout'>
               <KeySharp />
               <Text.Title>Add New Device</Text.Title>
