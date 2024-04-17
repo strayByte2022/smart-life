@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&display=swap');
+
+* {
+  font-family: 'Baloo Chettan 2' !important;
+}
+
 .page {
   padding: 16px 16px 96px 16px;
 }
@@ -10,30 +16,27 @@
   height: max-content;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end ;
+  justify-content: flex-end;
 }
 
 .zaui-list-item {
   cursor: pointer;
 }
-.img-slide
-{
+.img-slide {
   width: auto;
   display: block;
   height: 100%;
 }
-.welcome-text
-{
+.welcome-text {
   font-size: 8vh;
 }
-.get-started-button{
-  background-color: #EF3024;
+.get-started-button {
+  background-color: #ef3024;
 }
-.get-started-button:active{
-  background-color: #EF3024;
-  opacity: 0.8  ;
-  
+.get-started-button:active {
+  background-color: #ef3024;
+  opacity: 0.8;
 }
-.get-started-button:focus{
-  background-color: #EF3024;
+.get-started-button:focus {
+  background-color: #ef3024;
 }
