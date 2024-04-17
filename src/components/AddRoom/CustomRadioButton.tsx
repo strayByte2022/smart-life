@@ -15,8 +15,8 @@ const CustomRadioButton = ({ label, controlIcon }) => {
                 label={""}
                 labelPlacement='bottom'
                 sx={{
-                    width: '100px',
-                    height: '100px',
+                    width: '80px',
+                    height: '80px',
                     justifyContent:'center',
                     backgroundColor:'#f0f0f4',
                     borderRadius:'100%'

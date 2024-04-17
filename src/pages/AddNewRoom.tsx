@@ -25,11 +25,11 @@ const AddNewRoomPage = () => {
       />
       <Box sx={{ paddingLeft: '20px', paddingRight: '20px', paddingTop: '34px' }}>
         <Typography sx={{ color: 'grey' }}>Enter Room's Name</Typography>
-        <TextField sx={{ border: 'grey', paddingTop: '6px' }} />
+        <TextField sx={{ border: 'grey', paddingTop: '6px' , width:'100%'}} />
         <Box sx={{ paddingTop: '23px' }}>
-          <Typography>Select Room's Icon</Typography>
+          <Typography sx={{paddingBottom:'23px'}}>Select Room's Icon</Typography>
           <Box>
-            <RadioGroup sx={{display:'flex', flexDirection:'row', columnCount:'1', flexWrap:'wrap'}}>
+            <RadioGroup sx={{display:'flex', flexDirection:'row', columnCount:'1', flexWrap:'wrap', justifyContent:'center'}}>
               <CustomRadioButton controlIcon={<KitchenIcon/>} label="Kitchen"/>
               <CustomRadioButton controlIcon={<BedroomIcon/>} label="Bed Room"/>
               <CustomRadioButton controlIcon={<BathrommIcon/>} label="Bathroom"/>
