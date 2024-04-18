@@ -6,11 +6,11 @@ interface ButtonInterface{
     icon:React.ReactNode;
     roomName: string
     deviceQuantity: number
-    handleClick:void
+    handleClick:()=>{}
 }
-const FunctionalButton = ({icon,roomName,deviceQuantity}) => {
+const FunctionalButton = ({icon,roomName,deviceQuantity,handleClick}) => {
     return (
-        <Button className='function-button' sx={{ backgroundColor: 'white' }}>
+        <Button className='function-button' sx={{ backgroundColor: 'white' }} onClick={handleClick}>
             {icon}
             <Typography className='input-text'>{roomName}</Typography>
             <Typography className='input-text-low'>{`x${deviceQuantity} device(s)`}</Typography>

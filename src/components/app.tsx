@@ -8,8 +8,9 @@ import User from "../pages/user";
 import WelcomePage from "../pages/WelcomePage";
 import HomePage from "../pages/HomePage";
 import AddNewDevicePage from "../pages/AddNewDevice";
-import AddNewRoom from "../pages/AddNewRoom";
+
 import AddNewRoomPage from "../pages/AddNewRoom";
+import PrototypeKitchenRoomDetail from "../pages/PrototypeKitchenRoomDetail";
 
 const MyApp = () => {
   return (
@@ -25,6 +26,7 @@ const MyApp = () => {
               <Route path="/user" element={<User></User>}></Route>
               <Route path="/newdevice" element={<AddNewDevicePage/>}></Route>
               <Route path="/newroom" element={<AddNewRoomPage/>}></Route>
+              <Route path="/test" element={<PrototypeKitchenRoomDetail/>}></Route>
             </AnimationRoutes>
           </ZMPRouter>
         </SnackbarProvider>
