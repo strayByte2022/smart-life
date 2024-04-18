@@ -6,7 +6,7 @@ interface ButtonInterface{
     icon:React.ReactNode;
     roomName: string
     deviceQuantity: number
-    handleClick:()=>{}
+    handleClick:void
 }
 const FunctionalButton = ({icon,roomName,deviceQuantity,handleClick}) => {
     return (
