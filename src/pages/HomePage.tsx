@@ -9,7 +9,7 @@ import HomeTabs from '../components/Home/RoomDeviceTab';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BathrommIcon, BedroomIcon, CustomIcon, CustomPlusIcon, GarageIcon, KidsRoomIcon, KitchenIcon, OfficeIcon, SofaIcon, TvIcon } from '../components/icons';
 import { FunctionalButton } from '../components/Home';
-import { BarChart, Cyclone, Home, KeySharp, Settings } from '@mui/icons-material';
+import { BarChart, Cyclone, DevicesOther, Home, KeySharp, Settings } from '@mui/icons-material';
 import RoomDeviceTab from '../components/Home/RoomDeviceTab';
 
 
@@ -95,14 +95,17 @@ const HomePage: React.FunctionComponent = () => {
         open={addDevice}
         onClose={() => { setAddDevice(false) }}
         onOpen={() => { setAddDevice(true) }}
-        sx={{ borderTopLeftRadius: '20px', borderTopRightRadius: '20px', borderColor: 'black  ' }}
+        PaperProps={{elevation:0,style:{backgroundColor:'transparent'}}}
+        sx={{ borderTopLeftRadius: '20px', borderTopRightRadius: '20px', borderColor: 'black ' 
+        
+        }}
 
       >
-        <Box className='bottom-drawer'>
-          <Text.Title className='bottom-drawer-title'>Add New</Text.Title>
+        <Box className='bottom-drawer' sx={{backgroundColor:'white'}} >
+        <Text.Title className='bottom-drawer-title'>Add New</Text.Title>
           <Divider className='bottom-drawer-divider' />
           <Box>
-            <Button sx={{ display: 'flex', justifyContent: 'flex-start', color: 'black', textTransform: 'initial', paddingLeft: '30px' }}
+            <Button sx={{ display: 'flex', justifyContent: 'flex-start', color: 'black', textTransform: 'initial', paddingLeft: '30px', paddingTop:'20px', width:'100%' }}
               onClick={() => { navigate('/newdevice') }}>
               <Box className='bottom-drawer-buttons-layout' sx={{ gap: '32px' }}>
                 <KeySharp />
@@ -110,9 +113,9 @@ const HomePage: React.FunctionComponent = () => {
               </Box>
             </Button>
 
-            <Button sx={{ display: 'flex', justifyContent: 'flex-start', color: 'black', textTransform: 'initial', paddingLeft: '30px' }} onClick={() => { navigate('/newroom') }}>
+            <Button sx={{ display: 'flex', justifyContent: 'flex-start', color: 'black', textTransform: 'initial',paddingTop:'20px', paddingLeft: '30px', width:'100%'}} onClick={() => { navigate('/newroom') }}>
               <Box className='bottom-drawer-buttons-layout' sx={{ gap: '32px' }}>
-                <KeySharp />
+                <DevicesOther/>
                 <Text.Title>Add New Device</Text.Title>
               </Box>
             </Button>
