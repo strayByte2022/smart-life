@@ -78,7 +78,7 @@ const HomePage: React.FunctionComponent = () => {
           <Home />
         </IconButton>
 
-        <IconButton>
+        <IconButton onClick={()=>{navigate('/stats')}}>
           <BarChart />
         </IconButton>
 
