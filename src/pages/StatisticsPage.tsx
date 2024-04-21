@@ -4,6 +4,7 @@ import { Page } from 'zmp-ui'
 import UserAvatar from '../components/user-avatar'
 import DayMonthYearTab from '../components/Home/DayMonthYearTab'
 import { LineChart } from '@mui/x-charts'
+import DetailModal from '../components/StatisticsPage/DetailModal'
 
 const StatisticsPage = () => {
     // const handleTabChange=(newValue:number)=>
@@ -12,6 +13,7 @@ const StatisticsPage = () => {
     // }
     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     const [selectedStats, setSelectedStats] = React.useState('day');
+    const [openModal, setOpenModal] = React.useState(false);
     useEffect(() => {
         console.log(selectedStats)
         console.log(width)
@@ -80,9 +82,12 @@ const StatisticsPage = () => {
                                 fill: "white"
                             },
                         }}
-
+                        disableAxisListener
                         margin={{ left: 20 }}
                         colors={['red', 'white']}
+                        onMarkClick={()=>{
+                            setOpenModal(true)
+                        }}
                     /> : null
 
                 }
@@ -149,10 +154,9 @@ const StatisticsPage = () => {
                     />:null
                     
                  }
-                <Box>
-
-                </Box>
+                 
             </Stack>
+            <DetailModal handleClose={()=>{setOpenModal(false)}} isOpen={openModal}/>
         </Page>
     )
 }

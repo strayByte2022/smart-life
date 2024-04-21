@@ -3,6 +3,7 @@
 ## Install ZMP CLI
 Checkout this [page](https://mini.zalo.me/devtools/cli/intro/).
 
+⚠️⚠️⚠️⚠️ WE WILL BE USING MATERIAL UI, and FREESTYLE STYLING
 ## How to dev without using Zalo Mini App Studio 
 As the GUI of ZMAS is sucks, I recommend using vscode or any other IDE you like to dev! 
 * Step 0: Pull the code (of course).
