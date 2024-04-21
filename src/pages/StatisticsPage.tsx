@@ -5,6 +5,7 @@ import UserAvatar from '../components/user-avatar'
 import DayMonthYearTab from '../components/Home/DayMonthYearTab'
 import { LineChart } from '@mui/x-charts'
 import DetailModal from '../components/StatisticsPage/DetailModal'
+import BottomMenu from '../components/Layout/BottomMenu'
 
 const StatisticsPage = () => {
     // const handleTabChange=(newValue:number)=>
@@ -34,8 +35,8 @@ const StatisticsPage = () => {
                 </Toolbar>
 
             </AppBar>
-            <Stack sx={{ backgroundColor: '#0A182E', paddingLeft: '10px' }}>
-                <Box sx={{ display: 'flex', gap: '5px' }}>
+            <Stack sx={{ backgroundColor: '#0A182E' }}>
+                <Box sx={{ display: 'flex', gap: '5px', paddingLeft:'10px'}}>
                     {/* so sorry i could have used Tabs of mui but it is fucking far more complicated than just spaming stuffs */}
                     <Button sx={{
                         color: 'white',
@@ -82,7 +83,7 @@ const StatisticsPage = () => {
                                 fill: "white"
                             },
                         }}
-                        disableAxisListener
+                        
                         margin={{ left: 20 }}
                         colors={['red', 'white']}
                         onMarkClick={()=>{
@@ -117,7 +118,7 @@ const StatisticsPage = () => {
                             },
                         }}
 
-                        margin={{ left: 20 }}
+                        margin={{ left: 10 }}
                         colors={['red', 'white']}
                     /> : null
 
@@ -149,7 +150,7 @@ const StatisticsPage = () => {
                             },
                         }}
 
-                        margin={{ left: 20 }}
+                        margin={{ left: 10 }}
                         colors={['red', 'white']}
                     />:null
                     
@@ -157,6 +158,7 @@ const StatisticsPage = () => {
                  
             </Stack>
             <DetailModal handleClose={()=>{setOpenModal(false)}} isOpen={openModal}/>
+            <BottomMenu/>
         </Page>
     )
 }
