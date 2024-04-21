@@ -11,6 +11,7 @@ import { BathrommIcon, BedroomIcon, CustomIcon, CustomPlusIcon, GarageIcon, Kids
 import { FunctionalButton } from '../components/Home';
 import { BarChart, Cyclone, DevicesOther, Home, KeySharp, Settings } from '@mui/icons-material';
 import RoomDeviceTab from '../components/Home/RoomDeviceTab';
+import BottomMenu from '../components/Layout/BottomMenu';
 
 
 
@@ -73,23 +74,7 @@ const HomePage: React.FunctionComponent = () => {
         }
       </Box>
 
-      <Box className='bottom-navigation-bar'>
-        <IconButton>
-          <Home />
-        </IconButton>
-
-        <IconButton onClick={()=>{navigate('/stats')}}>
-          <BarChart />
-        </IconButton>
-
-        <IconButton>
-          <Cyclone />
-        </IconButton>
-
-        <IconButton>
-          <Settings />
-        </IconButton>
-      </Box>
+      <BottomMenu/>
       <SwipeableDrawer
         anchor='bottom'
         open={addDevice}
