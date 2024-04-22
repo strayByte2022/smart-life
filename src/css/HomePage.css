@@ -100,8 +100,9 @@
 .bottom-drawer{
     height: 33vh;
     padding-top: 30px;
-    border-top-left-radius:80px 80px;
-    border-top-right-radius: 80px 80px;
+    border-style: solid;
+    border-top-left-radius:20px;
+    border-top-right-radius: 20px;
 }
 .bottom-drawer-title
 {
