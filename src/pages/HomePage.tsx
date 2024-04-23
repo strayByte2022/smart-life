@@ -1,6 +1,5 @@
 import React, { useDeferredValue, useState } from "react";
 import { Page, Text, Avatar, Icon, useNavigate } from "zmp-ui";
-import Navigator from "../components/Navigator";
 
 import "../css/HomePage.css";
 import { userState } from "../state";

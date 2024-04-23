@@ -17,7 +17,7 @@ const BottomMenu = () => {
                 <IconButton onClick={()=>{navigate('/home'); setPage('home')}}><HomeIcon isChosen={page} /></IconButton>
                 <IconButton onClick={()=>{navigate('/stats'); setPage('stats')}}><StatsIcon isChosen={page} /></IconButton>
                 <IconButton onClick={()=>{navigate(''); setPage('routine')}}><RoutineIcon isChosen={page}/></IconButton>
-                <IconButton onClick={()=>{navigate(''); setPage('setting')}}><SettingIcon isChosen={page}/></IconButton>
+                <IconButton onClick={()=>{navigate('/setting'); setPage('setting')}}><SettingIcon isChosen={page}/></IconButton>
             </Box>
         </Paper>
     )
