@@ -1,14 +1,16 @@
 import { ArrowDropDownRounded, Circle } from '@mui/icons-material'
 import { Box, Button, Card, Divider, Modal, Stack, Typography } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
+import DateRangePicker from './DateRangePicker'
 interface ModalInterface {
   isOpen: boolean,
   handleClose: any
 }
 const DetailModal = ({ isOpen, handleClose }: ModalInterface) => {
+  const [isDetailCard, setIsDetailCard] = useState(true)
   return (
-    <Modal open={isOpen} onClose={handleClose} sx={{alignContent:'center', paddingLeft:'20px', paddingRight:'20px'}}>
-      <Card variant='elevation' sx={{ height: '30%', display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+    <Modal open={isOpen} onClose={()=>{handleClose(); setIsDetailCard(true)}} sx={{ alignContent: 'center', paddingLeft: '20px', paddingRight: '20px' }}>
+      {isDetailCard?<Card variant='elevation' sx={{ height: '30%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
 
 
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '5%', paddingRight: '10px', paddingBottom: '10px' }}>
@@ -23,6 +25,7 @@ const DetailModal = ({ isOpen, handleClose }: ModalInterface) => {
 
 
             }}
+            onClick={()=>{setIsDetailCard(false)}}
           >Choose Date</Button>
         </Box>
 
@@ -38,7 +41,7 @@ const DetailModal = ({ isOpen, handleClose }: ModalInterface) => {
           </Box>
 
           <Divider orientation='vertical' variant='middle' flexItem />
-          
+
           <Box>
             <Box sx={{ display: 'flex', justifyContent: 'center' }}>
               <Typography sx={{ fontWeight: 'bold' }} variant='h4'>000 </Typography>
@@ -48,9 +51,10 @@ const DetailModal = ({ isOpen, handleClose }: ModalInterface) => {
           </Box>
         </Box>
 
-        <Button sx={{width:'100%', color:'white', backgroundColor:'#027AFF', borderRadius:0}}>View Detail</Button>
+        <Button sx={{ width: '100%', color: 'white', backgroundColor: '#027AFF', borderRadius: 0 }}>View Detail</Button>
 
-      </Card>
+      </Card>:<DateRangePicker/>
+      }
     </Modal>
   )
 }
