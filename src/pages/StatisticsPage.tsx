@@ -6,6 +6,7 @@ import DayMonthYearTab from '../components/Home/DayMonthYearTab'
 import { LineChart } from '@mui/x-charts'
 import DetailModal from '../components/StatisticsPage/DetailModal'
 import BottomMenu from '../components/Layout/BottomMenu'
+import StatsSummaryPage from '../components/StatisticsPage/StatsSummaryPage'
 
 const StatisticsPage = () => {
     // const handleTabChange=(newValue:number)=>
@@ -15,6 +16,7 @@ const StatisticsPage = () => {
     var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     const [selectedStats, setSelectedStats] = React.useState('day');
     const [openModal, setOpenModal] = React.useState(false);
+    const [fullpageDetailDialog, setFullpageDetailDialog] = React.useState(false)
     useEffect(() => {
         console.log(selectedStats)
         console.log(width)
@@ -157,7 +159,8 @@ const StatisticsPage = () => {
                  }
                  
             </Stack>
-            <DetailModal handleClose={()=>{setOpenModal(false)}} isOpen={openModal}/>
+            <DetailModal handleClose={()=>{setOpenModal(false)}} isOpen={openModal} />
+            
             <BottomMenu/>
         </Page>
     )
