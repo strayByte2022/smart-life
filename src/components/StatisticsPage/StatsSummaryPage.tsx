@@ -15,23 +15,22 @@ const Transition = React.forwardRef(function Transition(
 
 const StatsSummaryPage = ({ open, handleClose, startDate, endDate }) => {
     return (
-        <Dialog fullScreen open={open}>
-            <Page>
-                <AppBar >
-                    <Toolbar sx={{ position: 'static', backgroundColor: '#0C1A32', display: 'flex' }}>
-                        <IconButton onClick={() => { handleClose() }}>
-                            <Close sx={{ color: 'white' }} />
-                        </IconButton>
-                        <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            <Typography variant="body1" component="div">
-                                {startDate} to {endDate}
-                            </Typography>
-                        </div>
-                    </Toolbar>
-                    
-                </AppBar>
-                
-            </Page>
+        <Dialog fullScreen open={open} sx={{ display: 'flex', flexDirection: 'column' }}>
+
+
+            <Toolbar sx={{ position: 'static', backgroundColor: '#0C1A32', display: 'flex' , color:'white'}}>
+                <IconButton onClick={() => { handleClose() }}>
+                    <Close sx={{ color: 'white' }} />
+                </IconButton>
+
+                <Box sx={{ display: 'flex', justifyContent: 'center', alignContent: 'center', width: '100%' }}>
+                    <Typography>{startDate} to {endDate}</Typography>
+                </Box>
+            </Toolbar>
+
+
+            <ConsumptionSummaryCard />
+
 
         </Dialog>
     )
