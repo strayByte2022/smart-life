@@ -2,6 +2,7 @@ import { Box, Switch, Typography } from '@mui/material'
 import React from 'react'
 
 const FansDetail = () => {
+    
     return (
         <Box>
             <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -14,7 +15,7 @@ const FansDetail = () => {
             </Box>
             <Box sx={{ paddingTop: '40px' }}>
                 <div>
-
+                
                 </div>
             </Box>
         </Box>
