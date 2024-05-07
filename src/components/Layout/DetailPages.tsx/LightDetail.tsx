@@ -34,10 +34,14 @@ const LightDetail = () => {
         redirect: "follow"
     };
     const getLedState = async () => {
+        try{
         const respone = await fetch("https://io.adafruit.com/api/v2/phuc12082003/feeds/smarthome-led/data/retain", getOptions)
         const result = await respone.text()
         setSwitchState(parseInt(result) === 1)
         console.log(result)
+        }catch(error){
+            console.error(error)
+        }
     }
     useEffect(() => {
         getLedState()
