@@ -1,6 +1,8 @@
-import { Box, Switch, Typography } from '@mui/material'
+import { Box, Button, IconButton, Switch, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import Slider from '@mui/material/Slider';
+import { Icon } from 'zmp-ui';
+import { Add, PlusOne, Remove } from '@mui/icons-material';
 const FansDetail = () => {
     function valuetext(value: number) {
         return `${value}RPM`;
@@ -35,7 +37,7 @@ const FansDetail = () => {
 
         const response = await fetch("https://io.adafruit.com/api/v2/phuc12082003/feeds/smarthome-fanspeed/data", postOptions);
         const result = await response.text();
-        console.log("Post result: ",result)
+        console.log("Post result: ", result)
 
     }
     useEffect(() => {
@@ -51,24 +53,26 @@ const FansDetail = () => {
 
                 <Switch />
             </Box>
-            <Box sx={{ display: 'flex', justifyContent: 'center', paddingTop: '40px' }}>
-                <Slider
-                    aria-label="Temperature"
+            <Box sx={{ display: 'grid', justifyContent: 'center', paddingTop: '40px', gap: '40px' }}>
+                <Box sx={{ display: 'flex', gap: '40px' }}>
+                    <Typography>±1</Typography>
+                    <IconButton sx={{ border: 'solid' }} onClick={(e) => { setFanSpeed(fanspeed - 1); postFanSpeed() }}>
+                        <Remove />
+                    </IconButton>
+                    <IconButton sx={{ border: 'solid' }} onClick={() => { setFanSpeed(fanspeed + 1); postFanSpeed() }}>
+                        <Add />
+                    </IconButton>
+                </Box>
+                <Box sx={{ display: 'flex', gap: '40px' }}>
+                    <Typography>±10</Typography>
+                    <IconButton sx={{ border: 'solid' }} onClick={(e) => { setFanSpeed(fanspeed - 10); postFanSpeed() }}>
+                        <Remove />
+                    </IconButton>
+                    <IconButton sx={{ border: 'solid' }} onClick={() => { setFanSpeed(fanspeed + 10); postFanSpeed() }}>
+                        <Add />
+                    </IconButton>
+                </Box>
 
-                    getAriaValueText={valuetext}
-                    color="secondary"
-                    value={fanspeed}
-                    sx={{
-                        width: '20em'
-                    }}
-                    max={1000}
-                    onChange={(e) => {
-                        console.log(e.target?.value)
-                        setFanSpeed(parseFloat(e.target?.value))
-                        postFanSpeed()
-                    }}
-                    
-                />
             </Box>
         </Box>
     )
