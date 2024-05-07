@@ -11,7 +11,6 @@ const LightDetail = () => {
     const raw = JSON.stringify({
         "value": switchState ? 0 : 1
     });
-
     const requestOptions: Object = {
         method: "POST",
         headers: myHeaders,
