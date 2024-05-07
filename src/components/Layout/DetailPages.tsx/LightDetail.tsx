@@ -1,6 +1,7 @@
 import { Box, Switch, Typography } from '@mui/material'
 import React, { useEffect } from 'react'
 import { Button } from 'zmp-ui'
+import LightStatusIcon from '../../icons/LightStatusIcon'
 
 const LightDetail = () => {
     const [switchState, setSwitchState] = React.useState(false)
@@ -8,7 +9,7 @@ const LightDetail = () => {
     myHeaders.append("X-AIO-Key", "aio_yGID980zvglJif4Ld8TCBTuZhaB4");
     myHeaders.append("Content-Type", "application/json")
     const raw = JSON.stringify({
-        "value": switchState?0:1
+        "value": switchState ? 0 : 1
     });
 
     const requestOptions: Object = {
@@ -27,20 +28,24 @@ const LightDetail = () => {
 
     }
 
-    const getOptions:Object = {
+    const getOptions: Object = {
         method: "GET",
         headers: myHeaders,
         redirect: "follow"
     };
     const getLedState = async () => {
+        try{
         const respone = await fetch("https://io.adafruit.com/api/v2/phuc12082003/feeds/smarthome-led/data/retain", getOptions)
         const result = await respone.text()
-        setSwitchState(parseInt(result)===1)
+        setSwitchState(parseInt(result) === 1)
         console.log(result)
+        }catch(error){
+            console.error(error)
+        }
     }
     useEffect(() => {
         getLedState()
-    },[])
+    }, [])
     return (
         <Box>
             <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -51,10 +56,12 @@ const LightDetail = () => {
 
                 <Switch checked={switchState} onChange={(e) => { setSwitchState(e.target.checked); turnLed() }} />
             </Box>
-            <Box sx={{ paddingTop: '40px' }}>
-                <div>
-                    
-                </div>
+            <Box sx={{ display:'flex', justifyContent:'center',paddingTop: '40px' }}>
+
+                <LightStatusIcon isLightOn={switchState} />
+
+
+
             </Box>
         </Box>
     )
