@@ -117,7 +117,7 @@ const Message = () => {
           // using various methods of Date class to get year, date, month, hours, minutes, and seconds.
 
           let dateStr = myDate.getFullYear() + "/" + (myDate.getMonth() + 1) + "/" + myDate.getDate() + " " + myDate.getHours() + ":" + myDate.getMinutes() + ":" + myDate.getSeconds()
-          return <CustomNotification message={message} time={dateStr} />
+          return <CustomNotification message={message} time={dateStr}/>
         })}
       </Box>
     </Page>
