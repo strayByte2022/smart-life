@@ -8,9 +8,10 @@ import CustomNotification from "../../components/Layout/CustomNotification";
 const Message = () => {
   const navigate = useNavigate();
   const [messages, setMesssages] = useState([])
+  const key = (import.meta.env.VITE_ADAFRUIT_KEY)?.toString() as string
   const fetchMessages = async () => {
     const myHeaders = new Headers();
-    myHeaders.append("X-AIO-Key", "aio_yGID980zvglJif4Ld8TCBTuZhaB4");
+    myHeaders.append("X-AIO-Key", key);
 
     const requestOptions: Object = {
       method: "GET",

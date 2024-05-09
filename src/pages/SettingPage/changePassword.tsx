@@ -6,13 +6,14 @@ import { Box, Typography } from "@mui/material";
 import { useSnackbar } from 'zmp-ui';
 const ChangePassword = () => {
   const navigate = useNavigate();
+  const key = (import.meta.env.VITE_ADAFRUIT_KEY)?.toString() as string
   const [oldPassword, setOldPassword] = useState("")
   const [enteredOldPassword, setEnteredOldPassword] = useState("")
   const [enteredNewPassword, setEnteredNewPassword] = useState("")
   const [confirmNewPassword, setConfirmNewPassword] = useState("")
   const { openSnackbar, setDownloadProgress, closeSnackbar } = useSnackbar();
   const myHeaders = new Headers();
-  myHeaders.append("X-AIO-Key", "aio_yGID980zvglJif4Ld8TCBTuZhaB4");
+  myHeaders.append("X-AIO-Key", key);
   myHeaders.append("Content-Type", "application/json");
   const requestOptions: Object = {
     method: "GET",
@@ -25,6 +26,7 @@ const ChangePassword = () => {
     const result = (await response.text()).trim()
     const finalResult = result.replace(/,+$/, "")
     console.log(finalResult)
+    console.log(key)
     setOldPassword(finalResult)
   }
   useEffect(() => {
