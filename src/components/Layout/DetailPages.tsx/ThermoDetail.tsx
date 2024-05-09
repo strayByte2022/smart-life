@@ -6,8 +6,9 @@ import { Button } from 'zmp-ui'
 const ThermoDetail = () => {
     const [temperature, setTemperature] = useState(0)
     const [humidity, setHumidity] = useState(0.0)
+    const key = (import.meta.env.VITE_ADAFRUIT_KEY)?.toString() as string
     var myHeaders = new Headers();
-    myHeaders.append("X-AIO-Key", "aio_yGID980zvglJif4Ld8TCBTuZhaB4");
+    myHeaders.append("X-AIO-Key", key);
     var requestOptions: Object = {
         method: 'GET',
         headers: myHeaders,

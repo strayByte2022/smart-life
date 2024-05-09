@@ -6,12 +6,12 @@ import LightStatusIcon from '../../icons/LightStatusIcon'
 const LightDetail = () => {
     const [switchState, setSwitchState] = React.useState(false)
     const myHeaders = new Headers();
-    myHeaders.append("X-AIO-Key", "aio_yGID980zvglJif4Ld8TCBTuZhaB4");
+    const key = (import.meta.env.VITE_ADAFRUIT_KEY)?.toString() as string
+    myHeaders.append("X-AIO-Key", key);
     myHeaders.append("Content-Type", "application/json")
     const raw = JSON.stringify({
         "value": switchState ? 0 : 1
     });
-
     const requestOptions: Object = {
         method: "POST",
         headers: myHeaders,

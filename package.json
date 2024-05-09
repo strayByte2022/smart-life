@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
+    "@types/node": "^20.12.10",
     "@types/react": "^18.2.73",
     "@types/react-dom": "^18.2.23",
     "@types/react-router-dom": "^5.3.3",

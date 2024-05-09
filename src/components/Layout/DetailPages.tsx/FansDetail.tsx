@@ -11,7 +11,8 @@ const FansDetail = () => {
     const [fanspeed, setFanSpeed] = useState(0)
     const { openSnackbar, setDownloadProgress, closeSnackbar } = useSnackbar();
     const myHeaders = new Headers();
-    myHeaders.append("X-AIO-Key", "aio_yGID980zvglJif4Ld8TCBTuZhaB4");
+    const key = (import.meta.env.VITE_ADAFRUIT_KEY)?.toString() as string
+    myHeaders.append("X-AIO-Key", key);
     myHeaders.append("Content-Type", "application/json");
 
 
