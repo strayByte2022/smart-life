@@ -148,7 +148,7 @@ const HomePage: React.FunctionComponent = () => {
         )}
       </Box>
 
-      <BottomMenu/>
+      
       <SwipeableDrawer
         anchor="bottom"
         open={addDevice}
