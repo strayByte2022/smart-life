@@ -144,7 +144,7 @@ const Setting = () => {
           </div>
         </div>
       </div>
-      <BottomMenu />
+      
     </div>
   );
 };
