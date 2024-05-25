@@ -10,14 +10,17 @@ import { useNavigate } from 'zmp-ui';
 const BottomMenu = () => {
     const navigate = useNavigate();
     const [page, setPage] = useState('home')
+    useState(()=>{
+        console.log(page)
+    })
     return (
         <Paper sx={{ position: 'fixed',bottom:0, width: '100%', borderRadius:0}}>
             
             <Box sx={{ display: 'flex' , justifyContent:'space-between'}}>
-                <IconButton onClick={()=>{navigate('/home'); setPage('home')}}><HomeIcon isChosen={page} /></IconButton>
-                <IconButton onClick={()=>{navigate('/stats'); setPage('stats')}}><StatsIcon isChosen={page} /></IconButton>
-                <IconButton onClick={()=>{navigate(''); setPage('routine')}}><RoutineIcon isChosen={page}/></IconButton>
-                <IconButton onClick={()=>{navigate('/setting'); setPage('setting')}}><SettingIcon isChosen={page}/></IconButton>
+                <IconButton onClick={()=>{setPage('home');navigate('/index/home'); }}><HomeIcon isChosen={page} /></IconButton>
+                <IconButton onClick={()=>{setPage('stats'); navigate('/index/stats'); }}><StatsIcon isChosen={page} /></IconButton>
+                <IconButton onClick={()=>{setPage('routine');navigate(''); }}><RoutineIcon isChosen={page}/></IconButton>
+                <IconButton onClick={()=>{setPage('setting'); navigate('/index/setting'); }}><SettingIcon isChosen={page}/></IconButton>
             </Box>
         </Paper>
     )

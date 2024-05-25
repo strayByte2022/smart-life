@@ -89,7 +89,7 @@ const HomePage: React.FunctionComponent = () => {
               deviceQuantity={3}
               roomName={"Kitchen"}
               handleClick={() => {
-                navigate("/test");
+                navigate("/index/test");
               }}
             />
             <FunctionalButton
@@ -148,7 +148,6 @@ const HomePage: React.FunctionComponent = () => {
         )}
       </Box>
 
-      <BottomMenu/>
       <SwipeableDrawer
         anchor="bottom"
         open={addDevice}

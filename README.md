@@ -1,5 +1,8 @@
 # Smart Life
 
+## Checkout .env file: 
+https://furl.one/env-file-smart-life
+
 ## Install ZMP CLI
 Checkout this [page](https://mini.zalo.me/devtools/cli/intro/).
 
