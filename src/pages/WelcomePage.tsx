@@ -86,7 +86,7 @@ const WelcomePage: React.FunctionComponent = () => {
             type="neutral"
             variant="tertiary"
             onClick={() => {
-              navigate("/home");
+              navigate("/index/home");
             }}
           >
             Skip
@@ -104,7 +104,7 @@ const WelcomePage: React.FunctionComponent = () => {
         <Button
           className="get-started-button"
           onClick={() => {
-            navigate("/home");
+            navigate("/index/home");
           }}
         >
           Get Started
