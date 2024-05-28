@@ -16,6 +16,8 @@ import FamilyAccess from "../pages/SettingPage/familyAccess";
 import ChangePassword from "../pages/SettingPage/changePassword";
 import EditProfile from "../pages/SettingPage/editProfile";
 import PageWithBotMenu from "./Layout/PageWithBotMenu";
+import LoginPage from "../pages/auth/LoginPage";
+import SignUpPage from "../pages/auth/SignUpPage";
 const MyApp = () => {
   return (
     <RecoilRoot>
@@ -24,6 +26,8 @@ const MyApp = () => {
           <ZMPRouter>
             <AnimationRoutes>
               <Route path="/" element={<WelcomePage></WelcomePage>}></Route>
+              <Route path="/login" element={<LoginPage/>}></Route>
+              <Route path="/signup" element={<SignUpPage/>}></Route>
               <Route path="/index" element={<PageWithBotMenu></PageWithBotMenu>}>
                 <Route path="home" element={<HomePage></HomePage>}></Route>
                 <Route path="newdevice" element={<AddNewDevicePage />}></Route>
