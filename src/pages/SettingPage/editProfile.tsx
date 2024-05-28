@@ -11,7 +11,7 @@ const EditProfile = () => {
           <button
             className="text-white"
             onClick={() => {
-              navigate("/setting");
+              navigate(-1);
             }}
           >
             <ArrowBack />

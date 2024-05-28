@@ -15,7 +15,7 @@ const Setting = () => {
   const navigate = useNavigate();
   return (
     <div className="h-screen">
-      <div className="h-1/4 bg-[#0A182E]">
+      <div className="h-1/3 bg-[#0A182E]">
         <div className="text-white text-3xl font-bold pl-8 pt-12 mb-8">
           Setting
         </div>
@@ -38,7 +38,7 @@ const Setting = () => {
           <button
             className="bg-slate-500/[.4] rounded-full flex items-center px-7 hover:cursor-pointer"
             onClick={() => {
-              navigate("/editprofile");
+              navigate("editprofile");
             }}
           >
             <Edit className=" text-white" />
@@ -91,7 +91,7 @@ const Setting = () => {
             <button
               className="w-full hover:cursor-pointer hover:bg-slate-300 py-4 border-solid border-2"
               onClick={() => {
-                navigate("setting/message");
+                navigate("message");
               }}
             >
               <div className="flex place-content-between mx-8 text-2xl items-center border-solid font-bold">

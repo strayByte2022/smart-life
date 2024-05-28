@@ -12,7 +12,7 @@ const Home = () => {
           <button
             className="text-white"
             onClick={() => {
-              navigate("/setting");
+              navigate(-1);
             }}
           >
             <ArrowBack />

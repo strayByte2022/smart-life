@@ -26,7 +26,7 @@ const PageWithBotMenu = () => {
       const result = await response.text()
       const temperature = parseFloat(result)
       setTemperature(temperature)
-      setOpen(temperature >= 40 ? true : false)
+      setOpen(temperature >= 60 ? true : false)
       console.log("Temp for warning: ", result)
     }
     catch (error) {
