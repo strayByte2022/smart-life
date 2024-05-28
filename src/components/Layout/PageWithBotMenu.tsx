@@ -69,6 +69,7 @@ const PageWithBotMenu = () => {
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
+        
       >
         <BottomNavigationAction onClick={() => { navigate("/index/home") }} icon={<HomeIcon isChosen={""} />} />
         <BottomNavigationAction onClick={() => { navigate("/index/stats") }} icon={<StatsIcon isChosen={""} />} />

@@ -5,6 +5,7 @@ import { Page, useNavigate } from 'zmp-ui'
 import { AppBar, IconButton, Toolbar, Typography, Button, Card, Box } from '@mui/material'
 import { ArrowBack } from '@mui/icons-material'
 import { requestCameraPermission } from "zmp-sdk/apis";
+
 const AddNewDevicePage = () => {
     const requestCamera = async () => {
         try {
